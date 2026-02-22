@@ -2,7 +2,7 @@
 
 <body>
 
-<h1>Lake Eutrophication Model – Nonlinear Dynamics Project</h1>
+<h1>The Dynamics of Lake Eutrophication </h1>
 
 <h2>Overview</h2>
 
