@@ -212,34 +212,10 @@ This effect is called hysteresis.
 </p>
 
 
-<h2>Numerical Method</h2>
-
-<p>
-The model is solved using numerical methods in Python.
-</p>
-
-<ul>
-
-<li>Root finding to find equilibrium points</li>
-
-<li>Derivative calculation for stability</li>
-
-<li>Numerical simulation for time evolution</li>
-
-<li>Parameter sweep for bifurcation diagram</li>
-
-</ul>
 
 
-<h2>Educational Importance</h2>
 
-<p>
-This model demonstrates how nonlinear mathematics explains real environmental tipping points.
-</p>
 
-<p>
-It connects theory with real-world environmental systems.
-</p>
 
 
 <h2>Conclusion</h2>
