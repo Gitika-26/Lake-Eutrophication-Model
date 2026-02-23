@@ -4,7 +4,7 @@
 ## 📌 Project Overview
 This repository provides a numerical and analytical investigation into **regime shifts** within freshwater ecosystems. Based on the **Carpenter Lake Eutrophication Model**, the project explores how phosphorus concentration ($P$) responds to external stressors and internal feedback loops.
 
-The study demonstrates the application of **Non-Linear Dynamics (NLD)** to solve **Societal Challenges**, specifically focusing on:
+The study demonstrates the application of **Non-Linear Dynamics (NLD)** to solve **Challenges in Environment Conservation**, specifically focusing on:
 * **Stability Analysis:** Classifying fixed points via the sign of the derivative (linear stability).
 * **Bifurcation Theory:** Identifying saddle-node points and ecological tipping points.
 * **Hysteresis:** Mathematically demonstrating the irreversibility of environmental collapse.
