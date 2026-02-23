@@ -10,8 +10,35 @@ The study demonstrates the application of **Non-Linear Dynamics (NLD)** to solve
 * **Hysteresis:** Mathematically demonstrating the irreversibility of environmental collapse.
 
 ---
+## 🔬 Mathematical Formulation without the b parameter
+The phosphorus concentration $P(t)$ is governed by the following Ordinary Differential Equation (ODE):
 
-## 🔬 Mathematical Framework
+$$\frac{dP}{dt} = L - sP + r \frac{P^q}{m^q + P^q}$$
+
+### Parameter Definitions
+| Parameter | Definition | Significance |
+| :--- | :--- | :--- |
+| **$L$** | External Loading | Nutrient input (The primary **Bifurcation Parameter**) |
+| **$s$** | Removal Rate | Sediment burial and water outflow |
+| **$r$** | Recycling Strength | Maximum internal release from sediments |
+| **$m$** | Half-saturation | Threshold where recycling reaches 50% capacity |
+| **$q$** | Hill Coefficient | Sigmoid nonlinearity (Feedback strength) |
+
+---
+
+## 📈 Key Findings
+
+### 1. Stability & Equilibrium Analysis
+Equilibria are identified where $\frac{dP}{dt} = 0$. The local stability is determined by the derivative $f'(P^*)$:
+* **Stable ($f'(P^*) < 0$):** The lake is resilient to perturbations (Healthy or Eutrophic states).
+* **Unstable ($f'(P^*) > 0$):** The threshold between recovery and collapse.
+
+
+
+### 2. Saddle-Node Bifurcation & Hysteresis
+As loading $L$ increases, the system hits a tipping point where the stable "healthy" state vanishes. Due to **Hysteresis**, once a lake collapses into a eutrophic state, the loading must be reduced significantly below the initial tipping point to restore clarity.
+
+## 🔬 Mathematical Framework with b parameter
 The phosphorus concentration $P$ over time is governed by the following Ordinary Differential Equation (ODE):
 
 $$\frac{dP}{dt} = (L + b) - sP + r \frac{P^q}{m^q + P^q}$$
