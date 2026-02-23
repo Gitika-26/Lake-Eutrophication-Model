@@ -59,8 +59,8 @@ $$\frac{dP}{dt} = (L + b) - sP + r \frac{P^q}{m^q + P^q}$$
 ## 📈 Analysis & Insights
 
 ### 1. Equilibrium and Stability
-Equilibrium states ($P^*$) occur when the rate of change is zero: $f(P) = 0$. 
-The stability of these states is determined by the derivative $f'(P^*)$:
+Equilibrium states occur when the rate of change is zero. 
+The stability of these states is determined by the derivative $\frac{dP}{dt}$:
 * **Stable ($f'(P^*) < 0$):** The system is resilient to small perturbations. 
 * **Unstable ($f'(P^*) > 0$):** This represents a "tipping point" or threshold.
 
