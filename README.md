@@ -1,237 +1,67 @@
+# Dynamics of Lake Eutrophication: A Bifurcation Analysis
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR_DEPLOYED_LINK_HERE)
 
+## 📌 Project Overview
+This repository presents a rigorous numerical and analytical study of **regime shifts** in freshwater ecosystems. Using nonlinear differential equations, the model simulates how phosphorus levels ($P$) respond to external loading and internal recycling. 
 
-<body>
+This project serves as a practical application of **Dynamical Systems** to solve **Societal Challenges**, demonstrating:
+* **Bifurcation Theory:** Identifying saddle-node points where ecosystems collapse.
+* **Stability Analysis:** Classifying equilibria via linear stability (Jacobian/Derivative analysis).
+* **Hysteresis & Irreversibility:** Mathematically proving why "cleaning up" is harder than "polluting."
 
-<h1>The Dynamics of Lake Eutrophication </h1>
+---
 
-<h2>Overview</h2>
+## 🔬 Mathematical Formulation
+The phosphorus concentration $P(t)$ is governed by the following Ordinary Differential Equation (ODE):
 
-<p>
-This repository contains a numerical implementation of a lake eutrophication model.
-The model describes how phosphorus concentration in a lake changes over time due to external input,
-natural removal, and internal recycling.
-</p>
+$$\frac{dP}{dt} = L - sP + r \frac{P^q}{m^q + P^q}$$
 
-<p>
-This system demonstrates important nonlinear dynamics concepts including:
-</p>
+### Parameter Definitions
+| Parameter | Definition | Significance |
+| :--- | :--- | :--- |
+| **$L$** | External Loading | Nutrient input (The primary **Bifurcation Parameter**) |
+| **$s$** | Removal Rate | Sediment burial and water outflow |
+| **$r$** | Recycling Strength | Maximum internal release from sediments |
+| **$m$** | Half-saturation | Threshold where recycling reaches 50% capacity |
+| **$q$** | Hill Coefficient | Sigmoid nonlinearity (Feedback strength) |
 
-<ul>
-<li>Multiple steady states</li>
-<li>Stability and instability</li>
-<li>Saddle-node bifurcation</li>
-<li>Environmental tipping points</li>
-<li>Hysteresis</li>
-</ul>
+---
 
-<p>
-This project is intended for students studying nonlinear dynamics, environmental science, or applied mathematics.
-</p>
+## 📈 Key Findings
 
+### 1. Stability & Equilibrium Analysis
+Equilibria are identified where $\frac{dP}{dt} = 0$. The local stability is determined by the derivative $f'(P^*)$:
+* **Stable ($f'(P^*) < 0$):** The lake is resilient to perturbations (Healthy or Eutrophic states).
+* **Unstable ($f'(P^*) > 0$):** The threshold between recovery and collapse.
 
-<h2>Scientific Background</h2>
 
-<p>
-Eutrophication is the process by which a lake becomes enriched with nutrients, especially phosphorus.
-This often happens due to agricultural runoff, wastewater discharge, or urban pollution.
-</p>
 
-<p>
-When phosphorus levels increase, excessive algal growth can occur. This can reduce oxygen levels and harm aquatic life.
-A clear lake may suddenly become polluted and turbid.
-</p>
+### 2. Saddle-Node Bifurcation & Hysteresis
+As loading $L$ increases, the system hits a tipping point where the stable "healthy" state vanishes. Due to **Hysteresis**, once a lake collapses into a eutrophic state, the loading must be reduced significantly below the initial tipping point to restore clarity.
 
-<p>
-Scientific research has shown that this transition is not always gradual.
-Instead, lakes can undergo sudden changes due to nonlinear internal recycling of phosphorus from sediments.
-This feedback creates tipping points in the system.
-</p>
 
 
-<h2>Model Equation</h2>
+---
 
-<p>The governing differential equation is:</p>
+## 💻 Interactive Deployment (Streamlit)
+I have developed a **Decision Support System** to bridge the gap between abstract NLD (Non-Linear Dynamics) and environmental policy.
 
-<p>
-dP/dt = L − sP + rP<sup>q</sup> / (m<sup>q</sup> + P<sup>q</sup>)
-</p>
+**Features of the [Live App](YOUR_DEPLOYED_LINK_HERE):**
+* **Dynamic Root-Finding:** Real-time numerical solution of fixed points as parameters vary.
+* **Automated Stability Classification:** Visual indicators for stable vs. unstable equilibria.
+* **Live Bifurcation Mapping:** Visualizes the system's position relative to the tipping point.
 
-<p>Where:</p>
+---
 
-<ul>
+## 📓 Notebook Implementation
+The `Lake_Eutrophication_Model.ipynb` contains the research-grade implementation:
+1. **Numerical Integration:** Using `scipy.optimize.fsolve` for precise root detection.
+2. **Phase Portrait Analysis:** Visualizing the rate of change across the state space.
+3. **Sensitivity Testing:** Exploring how the Hill coefficient $q$ affects the "sharpness" of ecological transitions.
 
-<li><b>P</b> = phosphorus concentration in the lake</li>
+---
 
-<li><b>L</b> = external phosphorus loading (control parameter)</li>
-
-<li><b>s</b> = phosphorus removal rate</li>
-
-<li><b>r</b> = recycling strength</li>
-
-<li><b>m</b> = half-saturation constant</li>
-
-<li><b>q</b> = nonlinearity exponent</li>
-
-</ul>
-
-
-<h2>Meaning of Parameters</h2>
-
-<h3>External Loading (L)</h3>
-
-<p>
-Represents nutrient input from agricultural runoff, wastewater, and pollution.
-This is the main bifurcation parameter of the system.
-</p>
-
-
-<h3>Removal Rate (s)</h3>
-
-<p>
-Represents natural phosphorus removal through sediment burial and water outflow.
-Higher values make the lake cleaner and more stable.
-</p>
-
-
-<h3>Recycling Strength (r)</h3>
-
-<p>
-Represents internal recycling of phosphorus from lake sediments.
-Higher values increase pollution feedback.
-</p>
-
-
-<h3>Half-Saturation Constant (m)</h3>
-
-<p>
-Controls when recycling becomes significant.
-</p>
-
-
-<h3>Nonlinearity Exponent (q)</h3>
-
-<p>
-Controls how strong the nonlinear feedback is.
-Higher values produce sharper tipping points.
-</p>
-
-
-<h2>Fixed Points</h2>
-
-<p>
-Fixed points are found by solving:
-</p>
-
-<p>dP/dt = 0</p>
-
-<p>
-These points represent equilibrium phosphorus levels.
-</p>
-
-<p>
-The system may have:
-</p>
-
-<ul>
-
-<li>One equilibrium</li>
-
-<li>Or three equilibria</li>
-
-</ul>
-
-<p>
-When three exist:
-</p>
-
-<ul>
-
-<li>Lower equilibrium is stable (clear lake)</li>
-
-<li>Middle equilibrium is unstable</li>
-
-<li>Upper equilibrium is stable (polluted lake)</li>
-
-</ul>
-
-
-<h2>Stability Analysis</h2>
-
-<p>
-Stability is determined using the derivative of the equation.
-</p>
-
-<p>
-If derivative is negative → stable
-</p>
-
-<p>
-If derivative is positive → unstable
-</p>
-
-
-<h2>Bifurcation Analysis</h2>
-
-<p>
-The bifurcation parameter is the external loading L.
-</p>
-
-<p>
-As L increases:
-</p>
-
-<ul>
-
-<li>The lake remains clear at first</li>
-
-<li>Then multiple states appear</li>
-
-<li>Finally, the clear state disappears</li>
-
-<li>The lake suddenly becomes polluted</li>
-
-</ul>
-
-<p>
-This sudden change is called a saddle-node bifurcation.
-</p>
-
-
-<h2>Environmental Meaning</h2>
-
-<p>
-The bifurcation shows that environmental change can be sudden and irreversible.
-</p>
-
-<p>
-Reducing pollution after collapse may not immediately restore the lake.
-</p>
-
-<p>
-This effect is called hysteresis.
-</p>
-
-
-
-
-
-
-
-
-<h2>Conclusion</h2>
-
-<p>
-The lake eutrophication model is a classic example of nonlinear dynamics in environmental science.
-</p>
-
-<p>
-It shows how small changes in pollution can cause sudden ecological collapse.
-</p>
-
-<p>
-Understanding these dynamics is important for environmental protection and management.
-</p>
-
-
-</body>
-</html>
+## 🚀 How to Run Locally
+1. Clone the repo: 
+   ```bash
+   git clone [https://github.com/YourUsername/Lake-Eutrophication-Model.git](https://github.com/YourUsername/Lake-Eutrophication-Model.git)
