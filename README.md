@@ -1,4 +1,4 @@
-# Dynamics of Lake Eutrophication: A Bifurcation Analysis
+# [Dynamics of Lake Eutrophication: A Bifurcation Analysis]((https://colab.research.google.com/drive/1BAKE2HDuuxtJDfsFAzdQXcCvcLG4daQe?usp=sharing))
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://jkkvqncndtkmc7bdvwwtm2.streamlit.app/)
 
 ## 📌 Project Overview
