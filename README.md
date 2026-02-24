@@ -1,6 +1,6 @@
 # Dynamics of Lake Eutrophication: A Bifurcation Analysis
 ## [Link to Google Colab Notebook](https://colab.research.google.com/drive/1BAKE2HDuuxtJDfsFAzdQXcCvcLG4daQe?usp=sharing)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://jkkvqncndtkmc7bdvwwtm2.streamlit.app/)
+## [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://jkkvqncndtkmc7bdvwwtm2.streamlit.app/)
 
 ## 📌 Project Overview
 This repository provides a numerical and analytical investigation into **regime shifts** within freshwater ecosystems. Based on the **Carpenter Lake Eutrophication Model**, the project explores how phosphorus concentration ($P$) responds to external stressors and internal feedback loops.
